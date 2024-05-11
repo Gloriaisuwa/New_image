@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compression</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Image Compression</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="loadingIndicator" style="display: none;">Processing...</div>
+    <div id="result" style="display: none;">
+        <h2>Compressed Image</h2>
+        <img id="compressedImage" src="" alt="Compressed Image">
+        <a id="downloadLink" href="" download>Download Compressed Image</a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
