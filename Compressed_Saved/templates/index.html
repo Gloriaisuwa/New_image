@@ -5,20 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Compression</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="./style2.css">
+  <link rel="stylesheet" href="./bootstrap.min.css">
 </head>
 <body>
-    <h1>Image Compression</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="image" id="imageInput" accept="image/*">
-        <button type="submit">Upload</button>
-    </form>
-    <div id="loadingIndicator" style="display: none;">Processing...</div>
-    <div id="result" style="display: none;">
-        <h2>Compressed Image</h2>
-        <img id="compressedImage" src="" alt="Compressed Image">
-        <a id="downloadLink" href="" download>Download Compressed Image</a>
-    </div>
+    <nav id="header" class="navbar bg-dark">
+        <div class="container-fluid">
+          <a href="./index2.html" class="navbar-brand text-warning"><h3>Compressor</h4></a>
+
+          <ul id="navlink" class="nav nav-pills">
+            <li><a class="nav-link text-warning" href="./index.html">Home</a></li>
+            <li><a class="nav-link text-warning" href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section id="hero" class="container-fluid">
+        <div id=content>
+          <h1>Image Compression</h1>
+
+          <div class="my-5">
+            <h2 class="text-primary">Compress Images</h2>
+            <h5 class="text-success">Without Losing Quality</h5>
+          </div>
+
+          <form id="uploadForm" enctype="multipart/form-data" class="my-5">
+              <input type="file" name="image" id="imageInput" accept="image/*"><br>
+              <button type="submit" class="btn btn-danger my-4">Click to Compress Image</button>
+          </form>
+
+          <div id="loadingIndicator" style="display: none;">Processing...</div>
+
+          <div id="result" style="display: none;">
+              <h2>Compressed Image</h2>
+              <img id="compressedImage" src="" alt="Compressed Image">
+              <a class="btn btn-outline-primary" id="downloadLink" href="">Download Compressed Image</a>
+          </div>
+      </div>
+
+      </section>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
-
