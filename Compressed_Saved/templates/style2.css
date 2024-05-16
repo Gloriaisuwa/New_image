@@ -1,0 +1,21 @@
+#hero {
+    background-image: url('./images\ \(1\).jpeg');
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 90%;
+    background-size: contain;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+
+
+
+}
+
+#content {
+
+}
